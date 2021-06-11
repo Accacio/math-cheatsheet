@@ -1,0 +1,23 @@
+#+TITLE:   math-cheatsheet
+
+* Table of Contents :TOC_3:noexport:
+- [[#description][Description]]
+  - [[#maintainers][Maintainers]]
+- [[#contribution][Contribution]]
+
+* Description
+# A summary of what this module does.
+This repo tries to create a cheatsheet of math formulas (from elementary to university mathematics)
+This is based on the work of [[https://ourway.keybase.pub/mathematics_cheat_sheet.pdf][Alex Spartalis]] as shown in [[https://news.ycombinator.com/item?id=20048205][Hacker News]]
+
+The [[https://github.com/Accacio/math-cheatsheet/releases/latest/download/mathematics_cheat_sheet.pdf][latest pdf version]].
+
+** Maintainers
++ @Accacio (Author)
+
+* Contribution
+- Equations should be $\LaTeX$ equations
+- Figures/diagrams preferably should be TiKz figures
+  - or .pdf/.eps images
+    + if not possible \to .png images
+
