@@ -1,5 +1,6 @@
 #+TITLE:   math-cheatsheet
 
+
 * Table of Contents :TOC_3:noexport:
 - [[#description][Description]]
   - [[#maintainers][Maintainers]]
@@ -10,7 +11,7 @@
 This repo tries to create a cheatsheet of math formulas (from elementary to university mathematics)
 This is based on the work of [[https://ourway.keybase.pub/mathematics_cheat_sheet.pdf][Alex Spartalis]] as shown in [[https://news.ycombinator.com/item?id=20048205][Hacker News]]
 
-The [[https://github.com/Accacio/math-cheatsheet/releases/latest/download/mathematics_cheat_sheet.pdf][latest pdf version]].
+#+html: <p align="center"><a href="https://github.com/Accacio/math-cheatsheet/releases/latest/download/mathematics_cheat_sheet.pdf"><img src="https://img.shields.io/badge/Download-pdf-blue" /></a></p>
 
 ** Maintainers
 + @Accacio (Author)
