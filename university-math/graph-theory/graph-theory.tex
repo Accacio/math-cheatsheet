@@ -1,0 +1,132 @@
+
+\section{Fundamental Explanations}
+
+\subsection{List of vertices:}
+$$
+V=\left\{v_{1}, v_{2}, v_{3}, \ldots\right\}
+$$
+\subsection{List of edges:}
+$$
+E=\left\{e_{1}, e_{2}, e_{3}, \ldots\right\}
+$$
+\subsection{Subgraphs:}
+$$
+\begin{array}{cc}
+\text{Any subgraph } \mathrm{H} \text{ such that}\\
+V(H) \subset V(G) ~\&~ E(H) \subset E(G)
+\end{array}
+$$
+\subsection{Tree:}
+\begin{center}
+Any subgraph $\mathrm{H}$ where $V(H)=V(G)$,\\ there are no cycles and all verticis are connected.
+\end{center}
+%
+\subsection{Degree of vertex:}
+$$\text{Number of edges leaving a vertex}$$
+$$\sum_{v \in V(G)} d(v)=2|E(G)| $$
+%
+%
+\subsection{Distance:}
+\begin{center}
+$\quad d(u, v)=$ Shortest path between $u ~\&~ v$
+\end{center}
+%
+\subsection{Diameter:}
+$$\quad \text{diam}(G)=\max _{u \& v \in V(G)}\{d(u, v)\}$$
+%
+\subsection{Total Edges in a simple bipartite graph:}
+$$|E(G)|=\frac{|V(X) \| V(Y)|}{2} $$
+$$\sum_{x \in X} d(x)=\sum_{y \in Y} d(y)$$
+%
+\subsection{Total Edges in K-regular graph:}
+$$
+|E(G)|=\frac{k(k-1)}{2}
+$$
+%
+%
+\section{Factorisation}
+%
+\subsection{Factorisation:}
+\begin{center}
+A spanning union of 1 Factors and only exists\\ if there are an even number of vertices.
+\end{center}
+%
+\subsection{Factors of a $K_\text{n,n}$ bipartite graph:}
+$$
+\begin{array}{l}
+F_{1}=\left[11^{\prime}, 22^{\prime}, 33^{\prime}, \ldots\right]\\
+F_{2}=\left[12^{\prime}, 23^{\prime}, 34^{\prime}, \ldots\right]\\
+F_{3}=\left[13^{\prime}, 24^{\prime}, 35^{\prime}, \ldots\right]\\
+F_{n}=\ldots\\
+\text{where all numbers are MOD(n) }
+\end{array}
+$$
+%
+\subsection{Factors of a $K_\text{2n}$ graph:}
+$$
+\begin{array}{l}
+F_{0}=\{(1, \infty),(2,0),(3,2 n-2), \ldots,(n, n+1)\}\\
+F_{i}=\{(i, \infty),(i+1,2 n-2+1), \ldots,(i+n-1, i+n\}\\
+F_{2 n-2}=\ldots\\
+\text{where all numbers are } \mathrm{MOD}(2 \mathrm{n}-1)
+\end{array}
+$$
+%
+%
+\section{Vertex Colouring}
+%
+\subsection{Chromatic Number:}
+$$
+\begin{array}{l}
+\chi(G) \geq 3 \text{   if there are triangles or an odd cycle}\\
+\chi(G) \geq 2 \text{   if is an even cycle}\\
+\chi(G) \geq n \text{   if } K_{n} \text{ is a subgraph of G}
+\end{array}
+$$
+%
+\subsection{Union/Intersection:}
+$$\text { If } G=G_{1} \cup G_{2} \text {  and  } G_{1} \cap G_{2}=K_{m}, \text {  then }$$
+$$P(G, \lambda)=\frac{P\left(G_{1}, \lambda\right) P\left(G_{2}, \lambda\right)}{P\left(K_{m}, \lambda\right)}$$
+%
+\subsection{Edge Contraction:}
+% fixed error G.e, see page 5 on https://www.whitman.edu/Documents/Academics/Mathematics/fouts.pdf
+$$ P(G, \lambda)=P(G-e, \lambda)-P(G/e, \lambda)$$
+%
+\subsection{Common Chromatic Polynomials:}
+$$
+\begin{array}{l}
+P\left(T_{n}, \lambda\right)=\lambda(\lambda-1)^{n-1} \\
+P\left(C_{n}, \lambda\right)=(\lambda-1)^{n}+(-1)^{n}(\lambda-1) \\
+P\left(K_{n}, \lambda\right)=\lambda(\lambda-1)(\lambda-2) \ldots(\lambda-n+1)
+\end{array}
+$$
+%
+\begin{center}
+ \begin{minipage}{0.75\textwidth}
+ \begin{itemize}
+ \setlength\itemsep{0em}
+\item Where the highest power is the number of vertices
+\item Where the lowest power is the number of components
+\item Where the coefficient of the 2nd highest power is the number of edges.
+\end{itemize}
+\end{minipage}
+\end{center}
+%
+\section{Edge Colouring}
+%
+\subsection{Common Chromatic Polynomials}
+$$
+\begin{array}{ll}
+\chi^{\prime}(G) &\geq \Delta(G) \\
+\chi^{\prime}\left(K_{n, n}\right)&=n \\
+\chi^{\prime}\left(C_{2 n}\right)&=2 \\
+\chi^{\prime}\left(C_{2 n+1}\right)&=3 \\
+\chi^{\prime}\left(K_{2 n}\right)&=2 n-1 \\
+\chi^{\prime}\left(K_{2 n+1}\right)&=2 n+1
+\end{array}
+$$
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../../mathematics_cheat_sheet"
+%%% End:
