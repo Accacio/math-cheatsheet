@@ -1,6 +1,19 @@
 
-
 \usepackage{amsmath}
+
+%% maya numbers | put after amsmath
+\usepackage{mathabx}
+\newcommand\mathbfont{\usefont{U}{mathb}{m}{n}}
+\def\mayaexpansion{%
+    \mayacntc=\mayacnta\mathbfont
+    \ifnum\mayacntc=0 0\else
+    \rotatebox[origin=c]{-90}{%
+    \loop\ifnum\mayacntc>5\advance\mayacntc by -5\repeat
+    \the\mayacntc\mayacntc=\mayacnta
+    \loop\ifnum\mayacntc>5\advance\mayacntc by -5 5\repeat}%
+  \fi}%
+%% roman numbers
+\newcommand*{\rom}[1]{\romannumeral #1}
 \usepackage{booktabs}
 \usepackage{graphicx}
 \graphicspath{{img/}}
