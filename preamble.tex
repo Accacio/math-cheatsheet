@@ -1,5 +1,76 @@
 
 \usepackage{amsmath}
+\usepackage{blindtext}
+
+%% hieroglyphic numbers
+\usepackage{hieroglf}
+\newcounter{hieroaux}
+\newcounter{hierocurr}
+\newcommand{\HieroDigit}[1]{\ifcase#1
+\or
+\Hone
+\or
+\Hten
+\or
+\Hhundred
+\or
+\Hthousand
+\or
+\HXthousand
+\or
+\HCthousand
+\or
+\Hmillion
+\fi}
+\DeclareRobustCommand\hg[1]{\setcounter{hierocurr}{#1}%
+\ifnum\value{hierocurr}>999999
+ \setcounter{hieroaux}{0}%
+ \loop\stepcounter{hieroaux}\textpmhg{\HieroDigit{7}}%
+ \ifnum\value{hieroaux}<\the\numexpr(\value{hierocurr}-500000)/1000000\relax%
+ \repeat%
+ \setcounter{hierocurr}{\the\numexpr\value{hierocurr}-\value{hieroaux}*1000000}%
+\fi
+\ifnum\value{hierocurr}>99999
+ \setcounter{hieroaux}{0}%
+ \loop\stepcounter{hieroaux}\textpmhg{\HieroDigit{6}}%
+ \ifnum\value{hieroaux}<\the\numexpr(\value{hierocurr}-50000)/100000\relax%
+ \repeat%
+ \setcounter{hierocurr}{\the\numexpr\value{hierocurr}-\value{hieroaux}*100000}%
+\fi%
+\ifnum\value{hierocurr}>9999
+ \setcounter{hieroaux}{0}%
+ \loop\stepcounter{hieroaux}\textpmhg{\HieroDigit{5}}%
+ \ifnum\value{hieroaux}<\the\numexpr(\value{hierocurr}-5000)/10000\relax%
+ \repeat%
+ \setcounter{hierocurr}{\the\numexpr\value{hierocurr}-\value{hieroaux}*10000}%
+\fi%
+\ifnum\value{hierocurr}>999
+ \setcounter{hieroaux}{0}%
+ \loop\stepcounter{hieroaux}\textpmhg{\HieroDigit{4}}%
+ \ifnum\value{hieroaux}<\the\numexpr(\value{hierocurr}-500)/1000\relax%
+ \repeat%
+ \setcounter{hierocurr}{\the\numexpr\value{hierocurr}-\value{hieroaux}*1000}%
+\fi%
+\ifnum\value{hierocurr}>99
+ \setcounter{hieroaux}{0}%
+ \loop\stepcounter{hieroaux}\textpmhg{\HieroDigit{3}}%
+ \ifnum\value{hieroaux}<\the\numexpr(\value{hierocurr}-50)/100\relax%
+ \repeat%
+ \setcounter{hierocurr}{\the\numexpr\value{hierocurr}-\value{hieroaux}*100}%
+\fi%
+\ifnum\value{hierocurr}>9
+ \setcounter{hieroaux}{0}%
+ \loop\stepcounter{hieroaux}\textpmhg{\HieroDigit{2}}%
+ \ifnum\value{hieroaux}<\the\numexpr(\value{hierocurr}-5)/10\relax%
+ \repeat%
+ \setcounter{hierocurr}{\the\numexpr\value{hierocurr}-\value{hieroaux}*10}%
+\fi%
+\ifnum\value{hierocurr}>0
+ \setcounter{hieroaux}{0}%
+ \loop\stepcounter{hieroaux}\textpmhg{\HieroDigit{1}}%
+ \ifnum\value{hieroaux}<\value{hierocurr}\relax%
+ \repeat%
+\fi}
 
 %% maya numbers | put after amsmath
 \usepackage{mathabx}
@@ -16,6 +87,7 @@
 \newcommand*{\rom}[1]{\romannumeral #1}
 \usepackage{booktabs}
 \usepackage{graphicx}
+\usepackage{subcaption}
 \graphicspath{{img/}}
 
 \newcommand{\monthyear}{%
