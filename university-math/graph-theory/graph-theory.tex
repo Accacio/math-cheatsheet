@@ -1,16 +1,60 @@
 \documentclass[../../mathematics_cheat_sheet.tex]{subfiles}
 
 \begin{document}
-
+\tikzset{
+  graphs/nodes={draw,circle,inner sep=1pt},
+}
 \chapter{Graph Theory}
 This chapter will be based on~\citet{GodsilRoyle2001}\cite{GodsilRoyle2001}.
 \section{Fundamentals}
 \subsection{Vertex:}
 The fundamental unit of \emph{graph theory}.
-\[v\]
+
+\[
+  v
+\]
+
+\begin{center}
+  \begin{tikzpicture}
+    \graph {
+      a/$v$;
+    };
+  \end{tikzpicture}
+\end{center}
+
 \subsection{Edge:}
 An unordered pair of vertices.
-\[e=\{v_{1},v_{2}\}\]
+
+\[
+  e=\{v_{1},v_{2}\}
+\]
+\begin{center}
+  \begin{tikzpicture}
+    \graph {
+      a/$v_{1}$ --["$e$"] b/$v_{2}$;
+    };
+  \end{tikzpicture}
+\end{center}
+\subsection{Arc:}
+An ordered pair of vertices.
+
+\[
+  a=(v_{1},v_{2})\quad
+b=(v_{2},v_{1})\]
+\begin{center}
+  \begin{tikzpicture}
+    \graph {
+      a/$v_{1}$ ->["$a$"] b/$v_{2}$;
+    };
+  \end{tikzpicture}
+  \quad
+  \begin{tikzpicture}
+    \graph {
+      a/$v_{1}$ <-["$b$"] b/$v_{2}$;
+    };
+  \end{tikzpicture}
+\end{center}
+
 \subsection{Vertex Set:}
 \[
   V=\left\{v_{1}, v_{2}, v_{3}, \ldots\right\}
@@ -21,6 +65,13 @@ An unordered pair of vertices.
 \]
 \subsection{Graph:}
 A Graph $X$ is composed of a \emph{vertex} set $V(X)$ and a \emph{edge} set $E(X)$.
+\begin{center}
+  \begin{tikzpicture}
+    \graph { subgraph C_n [--,n=5, clockwise] --[] 6 };
+  \end{tikzpicture}
+\end{center}
+
+
 \subsection{Subgraphs:}
 \[
   \begin{array}{cc}
@@ -28,6 +79,17 @@ A Graph $X$ is composed of a \emph{vertex} set $V(X)$ and a \emph{edge} set $E(X
     V(H) \subset V(G) ~\&~ E(H) \subset E(G)
   \end{array}
 \]
+\begin{center}
+  \begin{tikzpicture}
+    \graph { {[clockwise,n=5] 1[transparent], 2[transparent], 3, 4, 5[transparent]}, 6, { [--,clique] 6,3,4 }  };
+  \end{tikzpicture}
+  \quad
+  \begin{tikzpicture}
+    \graph { subgraph C_n [--,n=5, clockwise] --[] 6 };
+  \end{tikzpicture}
+\end{center}
+
+
 \subsection{Tree:}
 \begin{center}
   Any subgraph $\mathrm{H}$ where $V(H)=V(G)$,\\ there are no cycles and all vertices are connected.
