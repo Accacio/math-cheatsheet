@@ -33,7 +33,6 @@ jobs:
           prerelease: false
 
       - name: Upload Normal PDF
-        id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -43,7 +42,6 @@ jobs:
           asset_name: mathematics_cheat_sheet.pdf
           asset_content_type: pdf
       - name: Upload Kindle PDF
-        id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
