@@ -18,6 +18,8 @@ This is based on the work of [[https://ourway.keybase.pub/mathematics_cheat_shee
 
 * Contribution
 - Equations should be $\LaTeX$ equations
+- One folder for each chapter
+- Images relative to the chapter should be in a ~img~ folder
 - Figures/diagrams preferably should be TiKz figures
   - or .pdf/.eps images
     + if not possible \to .png images
