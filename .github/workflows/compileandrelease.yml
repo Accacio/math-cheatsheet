@@ -16,6 +16,10 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           root_file: mathematics_cheat_sheet.tex
+      - name: Compile Kindle LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: mathematics_cheat_sheet.kindle.tex
 
       - name: Create Release
         id: create_release
@@ -28,7 +32,7 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Upload Release Asset
+      - name: Upload Normal PDF
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
         env:
@@ -37,4 +41,14 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./mathematics_cheat_sheet.pdf
           asset_name: mathematics_cheat_sheet.pdf
+          asset_content_type: pdf
+      - name: Upload Kindle PDF
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./mathematics_cheat_sheet.kindle.pdf
+          asset_name: mathematics_cheat_sheet.kindle.pdf
           asset_content_type: pdf

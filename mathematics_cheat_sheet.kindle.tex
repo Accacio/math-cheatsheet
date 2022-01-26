@@ -1,0 +1,63 @@
+% \documentclass[a4paper]{tufte-book}
+\documentclass[kindle]{tufte-book}
+
+\title[All in one Mathematics Compendium]{All in one\\$Mathematics$\\\quad Compendium}
+\input{preamble}
+\input{math}
+% \usepackage[a6paper]{geometry}
+% \special{papersize=148mm,210mm}
+% ,margin=2mm
+% \geometry{a5paper}
+\usepackage{subfiles}
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+\newpage
+
+\begin{fullwidth}
+~\vfill
+\thispagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{\baselineskip}
+% Copyright \copyright\ \the\year\ \thanklessauthor
+
+% \par\smallcaps{Published by \thanklesspublisher}
+
+\par\smallcaps{https://github.com/Accacio/math-cheatsheet}
+
+\par\textit{First printing, \monthyear}
+\end{fullwidth}
+
+\tableofcontents
+
+\listoffigures
+\listoftables
+
+
+\cleardoublepage
+~\vfill
+\begin{doublespace}
+\noindent\fontsize{18}{22}\selectfont\itshape
+\nohyphenation
+Dedicated to those who love Mathematics
+\end{doublespace}
+\vfill
+\vfill
+
+\cleardoublepage
+
+\subfile{constants}
+
+\mainmatter
+
+\subfile{elementary-math/elementary-math.tex}
+
+\subfile{university-math/university-math.tex}
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+\end{document}
