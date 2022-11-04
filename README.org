@@ -11,7 +11,7 @@
 This repo tries to create a cheatsheet of math formulas (from elementary to university mathematics)
 This is based on the work of [[https://ourway.keybase.pub/mathematics_cheat_sheet.pdf][Alex Spartalis]] as shown in [[https://news.ycombinator.com/item?id=20048205][Hacker News]]
 
-#+html: <table style="text-align: center;"> <tr> <th>A4</th> <th>Kindle</th> </tr> <tr> <td><img width="200em" src="mathematics_cheat_sheet_preview.png" /><br/><a href="https://github.com/Accacio/math-cheatsheet/releases/latest/download/mathematics_cheat_sheet.pdf"><img src="https://img.shields.io/badge/Download-pdf-blue" /></a></td> <td><img width="200em" src="mathematics_cheat_sheet.kindle_preview.png" /><br/><a href="https://github.com/Accacio/math-cheatsheet/releases/latest/download/mathematics_cheat_sheet.kindle.pdf"><img src="https://img.shields.io/badge/Download-pdf-blue" /></a></td> </tr> </table>
+#+html: <table style="text-align: center;"> <tr> <th>A4</th> <th>Kindle</th> </tr> <tr> <td><div align="center"><img width="200em" src="mathematics_cheat_sheet_preview.png" /><br/><a href="https://github.com/Accacio/math-cheatsheet/releases/latest/download/mathematics_cheat_sheet.pdf"><img src="https://img.shields.io/badge/Download-pdf-blue" /></a></div></td> <td><div align="center"><img width="200em" src="mathematics_cheat_sheet.kindle_preview.png" /><br/><a href="https://github.com/Accacio/math-cheatsheet/releases/latest/download/mathematics_cheat_sheet.kindle.pdf"><img src="https://img.shields.io/badge/Download-pdf-blue" /></a></div></td> </tr> </table>
 
 ** Maintainers
 + @Accacio (Author)
